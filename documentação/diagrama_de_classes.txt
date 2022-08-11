@@ -1,0 +1,92 @@
+classDiagram
+class Arquivo{
+    -string caminho;
+    -string nome;
+    +Set_caminho() void
+    -Set_nome() void
+}
+
+class Arquivo_TXT_de_Entrada{
+    -arquivo *FILE
+    +Set_arquivo(string caminho) bool
+    +Get_arquivo() FILE
+}
+
+class Arquivo_TXT_de_Saida{
+    -string pasta
+    -ofstream arquivo
+    +Set_arquivo(string nome, string pasta, string extensao) bool
+    +Get_arquivo() ofstream
+    -cria_pasta() void
+}
+
+
+
+class Evento{
+    -Data momento
+    -int duracao
+    -int operacao
+    -int status
+    +Set_evento(int data, int duracao, int operacao, int status) void
+    +Get_duracao() int
+    +Get_operacao() int
+    +Get_dia() int
+    +Get_hora() int
+    +Get_minuto() int
+}
+
+
+
+class Arquivo_TXT_de_Entrada_log{
+    -vector ~Evento~ eventos
+    +Set_Arquivo_log(string caminho) bool
+    +Get_Eventos() vector~Evento~
+    -Set_eventos() void
+}
+
+class Arquivo_TXT_de_Saida_log{
+    -vector ~Evento~ eventos
+    + gerar_relatorio(-vector ~Evento~ eventos) void
+    -total_duracao_operacao_por_semana(ofstream *aux) void
+    -menor_erro(ofstream *aux) void
+    -resumo_operacoes_por_semana(ofstream *aux) void
+    -paradas_por_semana(ofstream *aux) void
+    -materia_mais_carregada_por_dia(ofstream *aux) void
+    -dias_aconteceu_status(ofstream *aux) void
+    -status_hora_do_dia(ofstream *aux) void
+    -sucesso_depois_erro(ofstream *aux) void
+    -sucesso_depois_erro_operacao_diferente(ofstream *aux) void
+}
+
+class Tabela_log{
+    -vector ~Evento~ eventos
+    +Set_tabela_log(vector ~Evento~ eventos) void
+    +operacoes_sem_erro() -vector ~Evento~
+    +duracao_por_status(int status) int
+    +numero_carregamentos_materia_prima(int materia) int 
+    +numero_operacao_por_status(int status) int
+    +numero_carregamentos_materia_prima_manha(int materia) int
+    +status_duracao(int status) int
+    +numero_erro_maior_5_minutos() int
+}
+
+class Data{
+    -int dia;
+    -int hora;
+    -int minuto
+    +Set_Data(int data) void
+    +Get_dia() int
+    +Get_hora() int
+    +Get_minuto() int
+
+}
+
+Data *-- Evento
+Evento *-- Arquivo_TXT_de_Entrada_log
+Evento *-- Arquivo_TXT_de_Saida_log
+Evento *-- Tabela_log
+
+Arquivo <|-- Arquivo_TXT_de_Entrada
+Arquivo <|-- Arquivo_TXT_de_Saida
+Arquivo_TXT_de_Entrada<|--Arquivo_TXT_de_Entrada_log
+Arquivo_TXT_de_Saida<|--Arquivo_TXT_de_Saida_log
