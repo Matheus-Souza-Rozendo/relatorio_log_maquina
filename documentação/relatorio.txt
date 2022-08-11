@@ -1,0 +1,218 @@
+ ------- Duração das Operações por Semana ------------- 
+Semana 1
+carregar matéria-prima 1 : 987 min
+carregar matéria-prima 2 : 1255 min
+carregar matéria-prima 3 : 731 min
+processo de secagem : 2781 min
+processo de lavagem : 2047 min
+processo de tingimento : 1992 min
+
+Semana 2
+carregar matéria-prima 1 : 441 min
+carregar matéria-prima 2 : 533 min
+carregar matéria-prima 3 : 917 min
+processo de secagem : 1445 min
+processo de lavagem : 1048 min
+processo de tingimento : 1653 min
+
+Semana 3
+carregar matéria-prima 1 : 615 min
+carregar matéria-prima 2 : 709 min
+carregar matéria-prima 3 : 894 min
+processo de secagem : 879 min
+processo de lavagem : 1417 min
+processo de tingimento : 1860 min
+
+Semana 4
+carregar matéria-prima 1 : 302 min
+carregar matéria-prima 2 : 258 min
+carregar matéria-prima 3 : 107 min
+processo de secagem : 347 min
+processo de lavagem : 217 min
+processo de tingimento : 514 min
+
+ ------- Operação que Apresentou Erro mais Rápido ------------- 
+Semana 1
+Menor duração da parada por erro - processo de secagem : 11 min 
+
+Semana 2
+Menor duração da parada por erro - processo de secagem : 11 min 
+
+Semana 3
+Menor duração da parada por erro - carregar matéria-prima 3 : 25 min 
+
+Semana 4
+Menor duração da parada por erro - processo de lavagem : 11 min 
+
+ ------- Resumo das Operações por Semana ------------- 
+ formato usado: semana, oper, status, soma; 
+1,1,0,87
+1,1,1,54
+1,1,2,45
+1,1,3,0
+1,2,0,72
+1,2,1,24
+1,2,2,89
+1,2,3,0
+1,3,0,77
+1,3,1,57
+1,3,2,4
+1,3,3,0
+1,4,0,77
+1,4,1,113
+1,4,2,115
+1,4,3,26
+1,5,0,46
+1,5,1,123
+1,5,2,95
+1,5,3,103
+1,6,0,110
+1,6,1,39
+1,6,2,102
+1,6,3,53
+2,1,0,46
+2,1,1,0
+2,1,2,117
+2,1,3,0
+2,2,0,122
+2,2,1,43
+2,2,2,18
+2,2,3,85
+2,3,0,3
+2,3,1,5
+2,3,2,64
+2,3,3,30
+2,4,0,114
+2,4,1,85
+2,4,2,68
+2,4,3,11
+2,5,0,28
+2,5,1,10
+2,5,2,42
+2,5,3,120
+2,6,0,4
+2,6,1,102
+2,6,2,118
+2,6,3,99
+3,1,0,63
+3,1,1,65
+3,1,2,0
+3,1,3,77
+3,2,0,54
+3,2,1,91
+3,2,2,109
+3,2,3,119
+3,3,0,42
+3,3,1,87
+3,3,2,67
+3,3,3,75
+3,4,0,45
+3,4,1,4
+3,4,2,78
+3,4,3,59
+3,5,0,2
+3,5,1,18
+3,5,2,101
+3,5,3,63
+3,6,0,25
+3,6,1,9
+3,6,2,48
+3,6,3,115
+4,1,0,39
+4,1,1,72
+4,1,2,86
+4,1,3,0
+4,2,0,83
+4,2,1,61
+4,2,2,0
+4,2,3,0
+4,3,0,92
+4,3,1,15
+4,3,2,0
+4,3,3,0
+4,4,0,64
+4,4,1,24
+4,4,2,0
+4,4,3,0
+4,5,0,14
+4,5,1,4
+4,5,2,38
+4,5,3,11
+4,6,0,113
+4,6,1,0
+4,6,2,110
+4,6,3,78
+ ------- Paradas por Semana ------------- 
+Semana 1
+Paradas: 13
+
+Semana 2
+Paradas: 7
+
+Semana 3
+Paradas: 8
+
+Semana 4
+Paradas: 2
+
+ ------- Matéria-Prima mais carregada em cada Dia ------------- 
+Dia1 : materia prima 3
+Dia2 : materia prima 3
+Dia3 : materia prima 1
+Dia4 : materia prima 2
+Dia5 : materia prima 1
+Dia6 : materia prima 1
+Dia7 : materia prima 1
+Dia8 : materia prima 3
+Dia9 : materia prima 2
+Dia10 : materia prima 3
+Dia11 : materia prima 2
+Dia12 : materia prima 3
+Dia13 : materia prima 1
+Dia14 : materia prima 1
+Dia15 : materia prima 1
+Dia16 : materia prima 3
+Dia17 : materia prima 1
+Dia18 : materia prima 1
+Dia19 : materia prima 3
+Dia20 : materia prima 1
+Dia21 : materia prima 1
+Dia22 : materia prima 1
+
+ ------- Numero de Dias que aconteceram cada status ------------- 
+operação bem sucedida: 16 dias
+sobrecarga leve: 16 dias
+sobrecarga com probabilidade de dano: 16 dias
+ parada por erro: 14 dias
+
+ ------- Status que mais ocorreram por hora do dia ------------- 
+0 horas: operação bem sucedida
+1 horas: operação bem sucedida
+2 horas: operação bem sucedida
+3 horas: operação bem sucedida
+4 horas: operação bem sucedida
+5 horas: operação bem sucedida
+6 horas: operação bem sucedida
+7 horas: operação bem sucedida
+8 horas: operação bem sucedida
+9 horas: operação bem sucedida
+10 horas: sobrecarga leve
+11 horas: operação bem sucedida
+12 horas: operação bem sucedida
+13 horas: operação bem sucedida
+14 horas: operação bem sucedida
+15 horas: operação bem sucedida
+16 horas: operação bem sucedida
+17 horas: operação bem sucedida
+18 horas: operação bem sucedida
+19 horas: operação bem sucedida
+20 horas: operação bem sucedida
+21 horas: operação bem sucedida
+22 horas: operação bem sucedida
+23 horas: operação bem sucedida
+
+ ------- Operação bem-sucedida seguida de erro ------------- 
+n° : 19
+
+ ------- Operação bem-sucedida seguida de erro considerando operações diferentes ------------- 
+n° : 12
