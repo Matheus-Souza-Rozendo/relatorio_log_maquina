@@ -1,10 +1,9 @@
 #ifndef LEITURA_DADOS_H_INCLUDED
 #define LEITURA_DADOS_H_INCLUDED
 #include <bits/stdc++.h>
-#include "Arvore.h"
 
 using namespace std;
-//função que retorna true se a string passada for um numero e false caso contrario
+//funÃ§Ã£o que retorna true se a string passada for um numero e false caso contrario
 bool valida_apenas_numeros(string entrada){
     bool ponto,menos;
     ponto=false;
@@ -50,7 +49,7 @@ float ler_numeros_reais(){
             throw(entrada);
         }
     }catch(string msg){
-        cout << msg << " Não é um valor valido " <<endl;
+        cout << msg << " NÃ£o Ã© um valor valido " <<endl;
         system("pause");
         goto leitura;
         cout << endl << endl;
@@ -79,7 +78,7 @@ float **ler_matriz_numeros_reais(int linhas, int colunas){
 }
 
 //recebe uma string e um char como parametro
-//retorna a primeira ocorencia do caractere na string, caso não ache retorna -1
+//retorna a primeira ocorencia do caractere na string, caso nÃ£o ache retorna -1
 int busca_caractere_string(string str, char c){
     for(int i=0;i<str.size();i++){
         if(str[i]==c){
@@ -99,15 +98,7 @@ void escreve_espaco(int n){
     }
 }
 
-void mostra_arvore(Arvore *raiz, int n){
-    if(raiz!=NULL){
-        mostra_arvore(raiz->direita,n+1);
-        escreve_espaco(n);
-        char c = raiz->caractere.simbolo;
-        cout << c << endl;
-        mostra_arvore(raiz->esquerda,n+1);
-    }
-}
+
 
 void mostra_map(map <int,string> m){
     for(auto it = m.begin();it!=m.end();it++){
@@ -116,19 +107,14 @@ void mostra_map(map <int,string> m){
     }
 }
 
-float **ordenar_matriz_ordem_crescente(float **p, int coluna, int linhas){
-    for(int indice=0;indice<linhas;indice++){
-        int indiceMenor = indice;
-        for(int indiceSeguinte=indice+1;indiceSeguinte<linhas;indiceSeguinte++){
-            if(p[indiceMenor][coluna]>p[indiceSeguinte][coluna]){
-                indiceMenor=indiceSeguinte;
-            }
-        }
-        float *aux = p[indice];
-        p[indice] = p[indiceMenor];
-        p[indiceMenor] = aux;
-    }
-    return p;
+template <typename T>
 
+T ordenar_matriz_ordem_crescente(T p, int coluna){
+     sort(p.begin(),p.end(),[coluna](auto a,auto b){
+            return a[coluna]<b[coluna];
+        });
+    return p;
 }
+
+
 #endif // LEITURA_DADOS_H_INCLUDED
